@@ -13,6 +13,11 @@
 - `docker cp ~/index.php d42fe469cfa3:/var/www/html` => `~/index.php` is the file location in the host and `d42fe469cfa3:/var/www/html` is the location for container
 - `docker cp /mnt/e/docker/index.php d42fe469cfa3:/var/www/html/` => incase of wsl
 - `docker run --rm -it -p 8080:80 ubuntu:20.04` => run the ubuntu
+- `docker ps` => docker current process
+
+## Building an image
+
+- `docker build -t rrupom/php-apache-first .` => -t for tage. here rrupom/php-apache-first is the tag
 
 ## Steps to make a Ubuntu system run PHP:
 
@@ -20,5 +25,5 @@
 - apt-get update
 - apt-get install apache2
 - service apache2 start
-- apt-get install libapache2-mod-php
--
+- apt-get install php libapache2-mod-php
+- copy index.php from host to container
